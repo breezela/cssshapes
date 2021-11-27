@@ -22,7 +22,9 @@ rangeInputs.forEach((el, index) => {
     }else{
       radius[index] = e.target.value + "%";
     }
-    code.innerHTML = "border-radius: " + radius.join(' ') + ";";
+    code.innerHTML = `
+    border-radius:  ${radius.join(' ')};
+    `;
   });
 })
 
@@ -38,3 +40,11 @@ document.querySelector("#sidebar").style.opacity="0"
 }
 })
 
+// function Handlecolor(){
+// const backcolor = document.querySelector('#color').value
+// document.querySelector('.blob').style.background =  `${backcolor}`;
+// document.querySelector('#color').style.background =  `${backcolor}`;
+// document.getElementsByClassName('.color').innerHTML=`background-color: ${backcolor}`
+ 
+
+// }
