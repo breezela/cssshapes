@@ -19,6 +19,13 @@ body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
   /* box-shadow: 0 0 20px 3px rgba(0, 0, 0, .13); */
 }
 
+.nav-link{
+    transition: 0.3;
+}
+.nav-link:hover{
+    border-bottom: 2px solid #3f51b5;
+}
+
 .range-container > label{ margin-top: 5px; }
 .range-container > input[type="range"]{ width: 100%; margin: 10px 0; color: #3f51b5;}
 .range-container > input[type="range"]:before{
@@ -63,7 +70,7 @@ body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
     overflow:hidden;
     height: fit-content;
     padding: 10px;
-    padding-top: 30px;
+    padding-top: 100px;
     padding-bottom: 20px;
     padding-left: 30px;
     margin: 20px auto;
