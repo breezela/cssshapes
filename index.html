@@ -25,22 +25,69 @@
                   </div>
     
             <div class="SideBar big-shadow" id="sidebar" style="opacity: 1;">
-                <div class="range-container no-margin">  
-                    <input type="range" id="radius1" min="0" max="100" step="1" value="70"  data-value="70%">
-                    <input type="range" id="radius2" min="0" max="100" step="1" value="30"  data-value="30%">
-                    <input type="range" id="radius3" min="0" max="100" step="1" value="30"  data-value="30%">
-                    <input type="range" id="radius4" min="0" max="100" step="1" value="70"  data-value="70%">
-                    <input type="range" id="radius5" min="0" max="100" step="1" value="60"  data-value="60%">
-                    <input type="range" id="radius6" min="0" max="100" step="1" value="40"  data-value="40%">
-                    <input type="range" id="radius7" min="0" max="100" step="1" value="60"  data-value="60%">
-                    <input type="range" id="radius8" min="0" max="100" step="1" value="40"  data-value="40%">
-                    <!-- <input type="color" id="color" class="section input width-50 height-50 circle padding-20 card"  onchange="Handlecolor()">
-                    <div class="color"></div> -->
-                    <div class="code section"></div>
+                <div class="range-container">  
+                <div class="e5 padding round-edge section">
+                    <div class="text-center padding text-indigo">
+                        <i class="fas fa-cogs"></i>
+                    Control Border
+                </div>
+
+                <div class="hr section"></div>
+                    <!-- <input type="range" id="radius1" min="0" max="100" step="1" value="70" class="section width-100-p"  data-value="70%">
+                    <input type="range" id="radius2" min="0" max="100" step="1" value="30" class="section width-100-p"  data-value="30%"> -->
+                    <input type="range" id="radius3" min="0" max="100" step="1" value="30" class="section width-100-p"  data-value="30%">
+                    <input type="range" id="radius4" min="0" max="100" step="1" value="70" class="section width-100-p"  data-value="70%">
+                    <input type="range" id="radius5" min="0" max="100" step="1" value="60" class="section width-100-p"  data-value="60%">
+                    <input type="range" id="radius6" min="0" max="100" step="1" value="40" class="section width-100-p"  data-value="40%">
+                     <input type="range" id="radius7" min="0" max="100" step="1" value="60" class="section width-100-p"  data-value="60%">
+                    <!-- <input type="range" id="radius8" min="0" max="100" step="1" value="40" class="section width-100-p"  data-value="40%">       -->
+                </div>
+        <div class="padding e5 round-edge section">
+                    <div class="text-center padding text-indigo">
+                        <i class="fas fa-adjust"></i>
+                    Paterns
+                </div>
+ <div class="hr section"></div>
+ <div class="row">
+     <div class="col sm-6 lg-6 md-6 padding">
+  <div class="pattern one"></div>
+     </div>
+     <div class="col sm-6 lg-6 md-6 padding">
+  <div class="pattern two"></div>
+     </div>
+     <div class="col sm-6 lg-6 md-6 padding">
+  <div class="pattern three"></div>
+     </div>
+     <div class="col sm-6 lg-6 md-6 padding">
+  <div class="pattern four"></div>
+     </div>
+ </div>
+                     </div>    
+                    <div>
+                        <div class="codeedit html round-edge">
+<xmp><div class="demo"></div></xmp>
+                        </div>
+                        <div class="codeedit css round-edge">
+                           <div class="xmp">
+                               <div class="code"></div>
+                           </div>
+                        </div>
+                        <div class="codeedit css color-container round-edge">
+                           <div class="xmp">
+                               <div class="color"></div>
+                           </div>
+                        </div>
+                        <div class="codeedit css color-container round-edge">
+                           <div class="xmp">
+                               <div class="pattern-display"></div>
+                           </div>
+                        </div>
+                    </div>
+               
                   </div>
             </div>
             <div class="Content">
-      <div class="sticky-top hide-small">
+      <div class="sticky-top nav">
         <div class="navigation-bar f2 text-small">
             <div class="text-x-large nav-logo montserrat text-indigo padding">
                 <img src="img/logo.png" class="width-30 icon fit" alt="logo">
@@ -60,13 +107,25 @@
                  
     <center>
         <div class="blob-container">
-          <div class="blob"></div>
+          <div class="blob scale-up pointer"  id="blob"></div>
+        </div>
+        <div class="section white padding round-edge card">   
+    <button class='button e5 card text-indigo float height-40 width-40 change'>
+        <i class="fas fa-bolt"></i>
+    </button>
+    <input type="color" id="color" class="section input width-40 height-40 card circle pointer  padding-20 change-color"  onchange="Handlecolor()">
+
         </div>
       </center>
       
 </div>
 
-<div class=" e5 content-middle small-fit">        
+<div class=" e5 content-middle small-fit relative">   
+    <div class="custom-shape-divider-top-1638069161">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+        </svg>
+    </div>
  <div class="relative">
     <div class="row">
         <div class="col sm-12 md-4 lg-4 padding text-center about-img">

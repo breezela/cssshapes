@@ -45,8 +45,8 @@ body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
 }
 
 .blob{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: var(--radius-1) var(--radius-2) var(--radius-3) var(--radius-4) / var(--radius-5) var(--radius-6) var(--radius-7) var(--radius-8);
   background-color: #21D4FD;
   background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
@@ -54,28 +54,15 @@ body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
   z-index: -99;
 }
 
-.range-container > .code{
-  margin-top: 20px;
-  background: rgba(0, 0, 0, .8);
-  padding: 10px;
-  color: rgba(255, 255, 255, .8);
-  border-radius: 5px;
-  font-size: 16px;
-  font-style: italic;
-  margin: 0;
-}
 
 .codeedit{
     border-left: 10px solid #4CAF50;
     overflow:hidden;
     height: fit-content;
-    padding: 10px;
-    padding-top: 100px;
-    padding-bottom: 20px;
-    padding-left: 30px;
+    padding: 25px 10px;
     margin: 20px auto;
     width: 100%;
-    background-color: rgba(225,225,225,0.5);
+    background-color:#E5E5F7;
     max-height: 400px;
     transition: 0.3s;
     border: 1px solid #ddd;
@@ -83,8 +70,18 @@ body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
     overflow:hidden
      }
   
-  .codeedit::before{
-    content: "Langauge markup";
+  .codeedit.html::before{
+    content: "HTML";
+    position: absolute;
+    top: 0;left: 0;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 5px;
+    box-shadow: 0px 2px 4px rgba(225,225, 225, 0.4);
+    font-size: small;
+  }
+  .codeedit.css::before{
+    content: "CSS";
     position: absolute;
     top: 0;left: 0;
     border-bottom: 1px solid #ddd;
@@ -94,14 +91,12 @@ body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
     font-size: small;
   }
 
-  .codeedit xmp{
+  .codeedit xmp,.xmp{
     background-color: #f2f2f2;
-    border-left: 5px solid #4CAF50;
-    overflow: scroll;
-    max-height: 300px;
     font-family: monospace;
-    font-size: medium;
+    font-size: small;
     padding: 10px;
+    overflow: auto;
   }
   .main{
     height: 100%;
@@ -113,7 +108,7 @@ body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
     top: 0;
     left: 0;
     bottom: 0;
-    width: 25%;
+    width: 30%;
     height: 100vh;
     display: block;
     background-color: #f2f2f2;
@@ -128,7 +123,7 @@ body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
     top: 0;
     right: 0;
     height: 100vh;
-    width:75%;
+    width:70%;
   }
   .open-sidebar{
     z-index: 10;
@@ -139,10 +134,15 @@ body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
     display: none;
     
     }
-  @media (max-width : 800px){
-    .SideBar{z-index: 5;background-color: whitesmoke;width: 80%;}
+    #sidebar{
+      transition: 0.5s;
+    }
+
+  @media (max-width : 950px){
+    .SideBar{z-index: 5;background-color: whitesmoke;width: fit-content;max-width: 350px;}
     .Content{width: 100%;}
     .open-sidebar{display: block;}
+    .nav{display: none;}
   }
   .sidebar-icon{
     display: none;
@@ -154,11 +154,11 @@ body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
   }
 
   .blob-container{
-      padding: 50px 20px 50px;
-      background-color: #ffffff;
-      box-shadow: 0px 5px 10px 0px rgba(225,225,225,0.5), 0px 10px 20px 0px rgba(225,225,225,0.8);
-      width: fit-content;
-      border-radius: 20px;
+  padding: 50px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px rgba(225,225,225,0.5), 0px 10px 20px 0px rgba(225,225,225,0.8);
+  width: fit-content;
+  border-radius: 20px;
   }
 
   .nav-logo{
@@ -267,4 +267,65 @@ border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
 display: block;
   }
 
+  .blob{
+  transition: 1s linear;
   
+  }
+
+  .change-color{
+    background-color: #3f51b5;
+    /* background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%); */
+  }
+  .pattern{
+    height: 100px;
+  }
+.pattern.one{
+background-color: #e5e5f7;
+opacity: 0.8;
+background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#444cf7 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #444cf7 0.8px, #e5e5f7 0.8px) -0.4px 0;
+background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+}
+.pattern.two{
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-size: 4px 4px;
+  background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 0.4px, #e5e5f7 0, #e5e5f7 50%);
+}
+.pattern.three{
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image:  linear-gradient(#444cf7 0.8px, transparent 0.8px), linear-gradient(90deg, #444cf7 0.8px, transparent 0.8px), linear-gradient(#444cf7 0.4px, transparent 0.4px), linear-gradient(90deg, #444cf7 0.4px, #e5e5f7 0.4px);
+  background-size: 20px 20px, 20px 20px, 4px 4px, 4px 4px;
+  background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px, -0.4px -0.4px;}
+.pattern.four{
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(circle at center center, #444cf7, #e5e5f7), repeating-radial-gradient(circle at center center, #444cf7, #444cf7, 10px, transparent 20px, transparent 10px);
+  background-blend-mode: multiply;
+}
+
+.pattern:hover{
+  cursor: pointer;
+}
+
+.custom-shape-divider-top-1638069161 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1638069161 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 183px;
+}
+
+.custom-shape-divider-top-1638069161 .shape-fill {
+  fill: #7B99F0;
+}
