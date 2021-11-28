@@ -40,11 +40,11 @@ document.querySelector("#sidebar").style.opacity="0"
 }
 })
 
-function Handlecolor(){
-const backcolor = document.querySelector('#color').value
-document.querySelector('.blob').style.background =  `${backcolor}`;
-document.querySelector('#color').style.background =  `${backcolor}`;
-document.getElementsByClassName('.color').innerHTML=`background-color: ${backcolor}`
+// function Handlecolor(){
+// const backcolor = document.querySelector('#color').value
+// document.querySelector('.blob').style.background =  `${backcolor}`;
+// document.querySelector('#color').style.background =  `${backcolor}`;
+// document.getElementsByClassName('.color').innerHTML=`background-color: ${backcolor}`
  
 
-}
+// }
